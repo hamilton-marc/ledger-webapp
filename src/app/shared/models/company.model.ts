@@ -1,18 +1,12 @@
-export class Transaction {
+export class Company {
 /* ToDo: Consider putting this in a superclass */
   id: number;
 
-  numberCode: string;
-  transactionDate: Date;
-  entryDate: Date;
+  name: string;
   description: string;
-  amount: number;
-
 /* ToDo: replace these with actual class types */
+  address: string;
   type: string;
-  contact: string;
-  category: string;
-  jobCode: string;
 
 /* ToDo: Consider putting these in a superclass */
   createdAt: Date;

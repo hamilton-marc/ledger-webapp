@@ -12,6 +12,6 @@ export class Contact {
   defaultCategory: string;
 
 /* ToDo: Consider putting these in a superclass */
-  insertDate: Date;
-  lastModifiedDate: Date;
+  createdAt: Date;
+  updatedAt: Date;
 }

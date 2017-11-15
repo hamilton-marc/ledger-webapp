@@ -1,9 +1,9 @@
-export class JobCode {
+export class TaxCode {
 /* ToDo: Consider putting this in a superclass */
   id: number;
 
-  code: string;
-  description: string;
+  form: string;
+  line: string;
 
 /* ToDo: Consider putting these in a superclass */
   createdAt: Date;
