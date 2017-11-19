@@ -1,4 +1,6 @@
 import { Component, OnInit, ViewEncapsulation } from '@angular/core';
+import { CurrencyPipe } from '@angular/common';
+
 import { Transaction } from '../shared/models/transaction.model';
 
 @Component({
@@ -19,7 +21,6 @@ export class TransactionListComponent implements OnInit {
 
         numberCode : "001",
         transactionDate : new Date(),
-        entryDate : new Date(),
         description : "The first transaction",
         amount : 9.95,
 
@@ -30,7 +31,40 @@ export class TransactionListComponent implements OnInit {
 
         createdAt : new Date(),
         updatedAt : new Date()
+      },
+      {
+        id : 2,
+
+        numberCode : "002",
+        transactionDate : new Date(),
+        description : "The second transaction",
+        amount : 19.95,
+
+        type : "Debit",
+        contact : "Target",
+        category : "Expense",
+        jobCode : "A1",
+
+        createdAt : new Date(),
+        updatedAt : new Date()
+      },
+      {
+        id : 3,
+
+        numberCode : "003",
+        transactionDate : new Date(),
+        description : "The third transaction",
+        amount : 25.50,
+
+        type : "Debit",
+        contact : "Walgreens",
+        category : "Expense",
+        jobCode : "A1",
+
+        createdAt : new Date(),
+        updatedAt : new Date()
       }
+
     ];
   }
 

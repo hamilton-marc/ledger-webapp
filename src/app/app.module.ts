@@ -1,8 +1,8 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
-
 import { AppComponent } from './app.component';
+import { TransactionListComponent } from './transaction/transaction-list.component';
 
 /**
  * The main module for the app. Here we include all of the other modules
@@ -10,7 +10,8 @@ import { AppComponent } from './app.component';
  */
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    TransactionListComponent
   ],
   imports: [
     BrowserModule

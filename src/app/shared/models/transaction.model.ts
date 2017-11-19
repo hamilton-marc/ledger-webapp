@@ -4,7 +4,6 @@ export class Transaction {
 
   numberCode: string;
   transactionDate: Date;
-  entryDate: Date;
   description: string;
   amount: number;
 

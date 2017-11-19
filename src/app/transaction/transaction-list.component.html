@@ -1,3 +1,27 @@
-<p>
-  transaction-list works!
-</p>
+<div class='table-responsive'>
+    <table class='table table-striped'
+            *ngIf='transactions && transactions.length'>
+        <thead>
+            <tr>
+                <th>Code</th>
+                <th>Date</th>
+                <th>Contact</th>
+                <th>Description</th>
+                <th>Amount</th>
+                <th>Category</th>
+                <th>Job</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor='let transaction of transactions'>
+                <td>{{ transaction.numberCode }}</td>
+                <td>{{ transaction.transactionDate }}</td>
+                <td>{{ transaction.contact }}</td>
+                <td>{{ transaction.description }}</td>
+                <td class="currency">{{ transaction.amount | currency:'USD' }}</td>
+                <td>{{ transaction.category }}</td>
+                <td>{{ transaction.job }}</td>
+            </tr>
+        </tbody>
+    </table>
+</div>

@@ -1,4 +1,4 @@
-import { JobCode } from './jobcode.model';
+import { JobCode } from './job-code.model';
 
 export class Category {
 /* ToDo: Consider putting this in a superclass */
