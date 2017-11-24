@@ -1,4 +1,6 @@
-export class Contact {
+import { Trackable } from './trackable.model';
+
+export class Contact implements Trackable {
 /* ToDo: Consider putting this in a superclass */
   id: number;
 

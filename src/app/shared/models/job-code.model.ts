@@ -1,4 +1,6 @@
-export class JobCode {
+import { Trackable } from './trackable.model';
+
+export class JobCode implements Trackable {
 /* ToDo: Consider putting this in a superclass */
   id: number;
 

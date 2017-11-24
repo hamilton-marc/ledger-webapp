@@ -1,4 +1,6 @@
-export class Company {
+import { Trackable } from './trackable.model';
+
+export class Company implements Trackable {
 /* ToDo: Consider putting this in a superclass */
   id: number;
 

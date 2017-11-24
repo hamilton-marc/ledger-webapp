@@ -1,8 +1,12 @@
+import { NgModule, ModuleWithProviders } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import { NgModule } from '@angular/core';
+import { RouterModule } from '@angular/router';
 
+import { HomeModule } from './home/home.module';
 import { AppComponent } from './app.component';
 import { TransactionListComponent } from './transaction/transaction-list.component';
+
+const rootRouting: ModuleWithProviders = RouterModule.forRoot([], { useHash: true });
 
 /**
  * The main module for the app. Here we include all of the other modules
@@ -14,7 +18,9 @@ import { TransactionListComponent } from './transaction/transaction-list.compone
     TransactionListComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    rootRouting,
+    HomeModule
   ],
   providers: [],
   bootstrap: [AppComponent]

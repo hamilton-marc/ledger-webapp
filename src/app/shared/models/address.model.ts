@@ -1,4 +1,6 @@
-export class Address {
+import { Trackable } from './trackable.model';
+
+export class Address implements Trackable {
 /* ToDo: Consider putting this in a superclass */
   id: number;
 

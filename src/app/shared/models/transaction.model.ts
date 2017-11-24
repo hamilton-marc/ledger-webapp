@@ -1,4 +1,6 @@
-export class Transaction {
+import { Trackable } from './trackable.model';
+
+export class Transaction implements Trackable {
 /* ToDo: Consider putting this in a superclass */
   id: number;
 
