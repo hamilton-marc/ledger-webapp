@@ -15,7 +15,7 @@
         <tbody>
             <tr *ngFor='let transaction of transactions'>
                 <td>{{ transaction.numberCode }}</td>
-                <td>{{ transaction.transactionDate }}</td>
+                <td>{{ transaction.transactionDate | date: 'short' }}</td>
                 <td>{{ transaction.contact }}</td>
                 <td>{{ transaction.description }}</td>
                 <td class="currency">{{ transaction.amount | currency:'USD' }}</td>
