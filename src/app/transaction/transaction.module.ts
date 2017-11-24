@@ -1,15 +1,17 @@
-import { NgModule } from '@angular/core';
+import { NgModule, ModuleWithProviders } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { Routes, RouterModule } from '@angular/router';
 
 import { TransactionListComponent } from './transaction-list.component';
 
-const routes: Routes = [];
+const transactionRouting: ModuleWithProviders = RouterModule.forChild([
+  { path: 'transactions', component: TransactionListComponent }
+]);
 
 @NgModule({
   imports: [
     CommonModule,
-    RouterModule.forChild(routes)
+    transactionRouting
   ],
   declarations: [
     TransactionListComponent

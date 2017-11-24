@@ -2,11 +2,16 @@ import { NgModule, ModuleWithProviders } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { RouterModule } from '@angular/router';
 
-import { HomeModule } from './home/home.module';
 import { AppComponent } from './app.component';
-import { TransactionListComponent } from './transaction/transaction-list.component';
+import { HomeModule } from './home/home.module';
+import { TransactionModule } from './transaction/transaction.module';
 
-const rootRouting: ModuleWithProviders = RouterModule.forRoot([], { useHash: true });
+const rootRouting: ModuleWithProviders = RouterModule.forRoot([
+/*
+  { path: '', redirectTo: 'home', pathMatch: 'full'},
+  { path: '**', redirectTo: 'home', pathMatch: 'full'}
+*/
+], { useHash: true });
 
 /**
  * The main module for the app. Here we include all of the other modules
@@ -15,12 +20,12 @@ const rootRouting: ModuleWithProviders = RouterModule.forRoot([], { useHash: tru
 @NgModule({
   declarations: [
     AppComponent,
-    TransactionListComponent
   ],
   imports: [
     BrowserModule,
     rootRouting,
-    HomeModule
+    HomeModule,
+    TransactionModule
   ],
   providers: [],
   bootstrap: [AppComponent]
