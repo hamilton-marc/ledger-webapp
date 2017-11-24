@@ -1,5 +1,14 @@
 import { Trackable } from './trackable.model';
 
+/**
+ * This class represents the concept of a company in
+ * our application.
+ *
+ * @author Union Hills Software
+ * @date   November 24, 2017
+ *
+ */
+
 export class Company implements Trackable {
 /* ToDo: Consider putting this in a superclass */
   id: number;

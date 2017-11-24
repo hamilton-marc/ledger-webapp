@@ -1,5 +1,15 @@
 import { Trackable } from './trackable.model';
 
+/**
+ * This class represents the concept of a transaction in
+ * our application.  A transaction represents a financial
+ * activity that has occurred in a company.
+ *
+ * @author Union Hills Software
+ * @date   November 24, 2017
+ *
+ */
+
 export class Transaction implements Trackable {
 /* ToDo: Consider putting this in a superclass */
   id: number;

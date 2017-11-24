@@ -9,9 +9,12 @@
  *
  */
 
-export const enum ContactType {
-  None,
-  Customer,
-  Vendor,
-  Other
+export const enum CompanyType {
+  SoleProprietorship,
+  Partnership,
+  S_Corporation,
+  C_Corporation,
+  LL_Partnership,
+  LL_S_Corporation,
+  LL_C_Corporation
 }
