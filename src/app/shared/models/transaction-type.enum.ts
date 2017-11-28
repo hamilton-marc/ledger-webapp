@@ -12,7 +12,7 @@
  *
  */
 
-export const enum TransactionType {
+export enum TransactionType {
   None,
   Revenue,
   Contribution,

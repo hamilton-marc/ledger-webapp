@@ -2,6 +2,7 @@ import { Component, OnInit, ViewEncapsulation } from '@angular/core';
 import { CurrencyPipe, DatePipe } from '@angular/common';
 
 import { Transaction } from '../shared/models/transaction.model';
+import { TransactionType } from '../shared/models/transaction-type.enum';
 import { TransactionService } from './transaction.service';
 
 @Component({
@@ -12,6 +13,7 @@ import { TransactionService } from './transaction.service';
 })
 export class TransactionListComponent implements OnInit {
   transactions: Transaction[] = <Transaction[]>[];
+  TransactionType: typeof TransactionType = TransactionType;
 
   constructor(
     private transactionService: TransactionService

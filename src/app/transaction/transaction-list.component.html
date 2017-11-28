@@ -10,9 +10,10 @@
                 <th>Date</th>
                 <th>Contact</th>
                 <th>Description</th>
-                <th>Amount</th>
+                <th>Debit</th>
+                <th>Credit</th>
                 <th>Category</th>
-                <th>Job</th>
+<!--            <th>Job</th>  -->
             </tr>
         </thead>
         <tbody>
@@ -21,9 +22,20 @@
                 <td>{{ transaction.transactionDate | date: 'short' }}</td>
                 <td>{{ transaction.contact }}</td>
                 <td>{{ transaction.description }}</td>
-                <td class="currency">{{ transaction.amount | currency:'USD' }}</td>
+                <td class="currency">
+                  <span *ngIf="transaction.type == TransactionType.Expense ||
+                               transaction.type == TransactionType.Withdrawl">
+                    {{ transaction.amount | currency:'USD' }}
+                  </span>
+                </td>
+                <td class="currency">
+                  <span *ngIf="transaction.type == TransactionType.Revenue ||
+                               transaction.type == TransactionType.Contribution">
+                    {{ transaction.amount | currency:'USD' }}
+                  </span>
+                </td>
                 <td>{{ transaction.category }}</td>
-                <td>{{ transaction.job }}</td>
+<!--            <td>{{ transaction.job }}</td>  -->
             </tr>
         </tbody>
     </table>

@@ -3,6 +3,7 @@ import { Observable } from 'rxjs/Observable';
 import 'rxjs/add/observable/of';
 
 import { Transaction } from '../shared/models/transaction.model';
+import { TransactionType } from '../shared/models/transaction-type.enum';
 
 @Injectable()
 export class TransactionService {
@@ -12,13 +13,13 @@ export class TransactionService {
 
       numberCode : "001",
       transactionDate : new Date(),
-      description : "The first transaction",
-      amount : 9.95,
+      description : "Seed money from small business loan",
+      amount : 1500,
 
-      type : "Debit",
-      contact : "Wal-Mart",
-      category : "Expense",
-      jobCode : "A1",
+      type : TransactionType.Contribution,
+      contact : "Small Business Association",
+      category : "Capital infusion",
+      jobCode : "",
 
       createdAt : new Date(),
       updatedAt : new Date()
@@ -28,12 +29,12 @@ export class TransactionService {
 
       numberCode : "002",
       transactionDate : new Date(),
-      description : "The second transaction",
+      description : "Office decorations",
       amount : 19.95,
 
-      type : "Debit",
+      type : TransactionType.Expense,
       contact : "Target",
-      category : "Expense",
+      category : "Office supplies",
       jobCode : "A1",
 
       createdAt : new Date(),
@@ -44,12 +45,12 @@ export class TransactionService {
 
       numberCode : "003",
       transactionDate : new Date(),
-      description : "The third transaction",
+      description : "Office first aid kit",
       amount : 25.50,
 
-      type : "Debit",
+      type : TransactionType.Expense,
       contact : "Walgreens",
-      category : "Expense",
+      category : "Office supplies",
       jobCode : "A1",
 
       createdAt : new Date(),
@@ -60,12 +61,12 @@ export class TransactionService {
 
       numberCode : "004",
       transactionDate : new Date(),
-      description : "The fourth transaction",
+      description : "Pens, paper, stapler, sticky pads",
       amount : 35,
 
-      type : "Debit",
+      type : TransactionType.Expense,
       contact : "OfficeMax",
-      category : "Expense",
+      category : "Office supplies",
       jobCode : "A1",
 
       createdAt : new Date(),

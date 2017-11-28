@@ -1,4 +1,5 @@
 import { Trackable } from './trackable.model';
+import { TransactionType } from './transaction-type.enum';
 
 /**
  * This class represents the concept of a transaction in
@@ -20,7 +21,7 @@ export class Transaction implements Trackable {
   amount: number;
 
 /* ToDo: replace these with actual class types */
-  type: string;
+  type: TransactionType;
   contact: string;
   category: string;
   jobCode: string;
