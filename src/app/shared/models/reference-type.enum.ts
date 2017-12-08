@@ -10,11 +10,11 @@
  */
 
 export const enum ReferenceType {
-  None,
-  Debit,
-  Check,
-  ServiceCharge,
-  Withdrawl,
-  Contribution,
-  Other
+  None = "None",
+  Debit = "Debit",
+  Check = "Check",
+  ServiceCharge = "Service Charge",
+  Withdrawl = "Withdrawl",
+  Contribution = "Contribution",
+  Other = "Other"
 }

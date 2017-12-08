@@ -7,11 +7,9 @@ import { HomeModule } from './home/home.module';
 import { TransactionModule } from './transaction/transaction.module';
 
 const rootRouting: ModuleWithProviders = RouterModule.forRoot([
-/*
-  { path: '', redirectTo: 'home', pathMatch: 'full'},
-  { path: '**', redirectTo: 'home', pathMatch: 'full'}
-*/
-], { useHash: true });
+  { path: '', redirectTo: 'home', pathMatch: 'full' },
+  { path: '**', redirectTo: 'home', pathMatch: 'full' }
+], { useHash: false });
 
 /**
  * The main module for the app. Here we include all of the other modules
@@ -28,6 +26,6 @@ const rootRouting: ModuleWithProviders = RouterModule.forRoot([
     TransactionModule
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [ AppComponent ]
 })
 export class AppModule { }

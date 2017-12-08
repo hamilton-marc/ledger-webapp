@@ -10,11 +10,11 @@
  */
 
 export const enum CompanyType {
-  SoleProprietorship,
-  Partnership,
-  S_Corporation,
-  C_Corporation,
-  LL_Partnership,
-  LL_S_Corporation,
-  LL_C_Corporation
+  SoleProprietorship = "Sole Proprietorship",
+  Partnership = "Partnership",
+  S_Corporation = "S Corporation",
+  C_Corporation = "C Corporation",
+  LL_Partnership = "LL Partnership",
+  LL_S_Corporation = "LL S Corporation",
+  LL_C_Corporation = "LL C Corporation"
 }
