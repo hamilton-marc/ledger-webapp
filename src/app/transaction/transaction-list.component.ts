@@ -33,32 +33,7 @@ export class TransactionListComponent implements OnInit {
   }
 
   onNewTransaction() {
-
-  }
-
-  onNewTransaction_shortcut() {
-//  alert('ToDo: Implement New Transaction');
-    this.transactionService.createTransaction(
-      {
-        "id" : 0,
-
-        "numberCode" : "010",
-        "transactionDate" : new Date(),
-        "description" : "Printing supplies, ink, paper",
-        "amount" : 40,
-
-        "type" : TransactionType.Expense,
-        "contact" : "Staples",
-        "category" : "Office supplies",
-        "jobCode" : "A1",
-
-        "createdAt" : new Date(),
-        "updatedAt" : new Date()
-      }
-
-    );
-
-    this.refresh();
+    this.router.navigateByUrl('/transaction');
   }
 
   onDeleteTransaction(transaction: Transaction) {
