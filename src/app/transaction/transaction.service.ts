@@ -12,16 +12,38 @@ import { TransactionType } from '../shared/models/transaction-type.enum';
 
 @Injectable()
 export class TransactionService {
-  private transactionServiceUrl = './mock-api/transactions/transactions.json';
+  private static transactions: Transaction[] = null;
+  private serviceUrl = './mock-api/transactions/transactions.json';
+  private newTransactionId = 10;
 
   constructor(
     private http: HttpClient
   ) { }
 
   getTransactions(): Observable<Transaction[]> {
-    return this.http.get<Transaction[]>(this.transactionServiceUrl)
-    .do(data => console.log('All: ' + JSON.stringify(data)))
-    .catch(this.handleError);
+    if (TransactionService.transactions == null) {
+      return this.http.get<Transaction[]>(this.serviceUrl)
+      .do(data => console.log('All: ' + JSON.stringify(data)))
+      .do(data => TransactionService.transactions = data)
+      .catch(this.handleError);
+    }
+
+    return Observable.of(TransactionService.transactions);
+  }
+
+  createTransaction(newTransaction: Transaction) {
+    newTransaction.id = this.newTransactionId++;
+    newTransaction.numberCode = String(newTransaction.id).padStart(3, '0');
+
+    TransactionService.transactions.push(newTransaction);
+  }
+
+  deleteTransaction(transaction: Transaction) {
+    const deleteIndex = TransactionService.transactions.indexOf(transaction);
+
+    if (deleteIndex > -1) {
+      TransactionService.transactions.splice(deleteIndex, 1);
+    }
   }
 
   private handleError(err: HttpErrorResponse) {

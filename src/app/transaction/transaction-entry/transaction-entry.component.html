@@ -1,0 +1,42 @@
+<h2>Transaction Entry</h2>
+<p>Enter the details of the transaction below</p>
+
+
+<form [formGroup]="transactionEntryForm" (submit)="saveTransaction()">
+  <div class="form-group">
+    <label for="numberCode">Number/Code</label>
+    <input formControlName="numberCode" id="numberCode" class="form-control w-25"/>
+  </div>
+
+  <div class="form-group">
+    <label for="transactionDate">Date</label>
+    <input formControlName="transactionDate" id="transactionDate" class="form-control w-50"/>
+  </div>
+
+  <div class="form-group">
+    <label for="contact">Contact</label>
+    <input formControlName="contact" id="contact" class="form-control w-25"/>
+  </div>
+
+  <div class="form-group">
+    <label for="amount">Amount</label>
+    <input formControlName="amount" id="amount" class="form-control w-25"/>
+  </div>
+
+  <div class="form-group">
+    <label for="type">Type</label>
+    <input formControlName="type" id="type" class="form-control w-25"/>
+  </div>
+
+  <div class="form-group">
+    <label for="category">Category</label>
+    <input formControlName="category" id="category" class="form-control w-50"/>
+  </div>
+
+  <div class="form-group">
+    <label for="description">Description</label>
+    <input formControlName="description" id="description" class="form-control w-75"/>
+  </div>
+
+  <button type="submit" class="btn btn-primary">Submit</button>
+</form>

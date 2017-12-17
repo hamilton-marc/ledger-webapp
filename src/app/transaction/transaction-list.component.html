@@ -1,11 +1,16 @@
-<h1>Transactions</h1>
+<h2>Transactions</h2>
 <p>Your company's financial activity</p>
+
+<p>
+  <button class="btn btn-primary" (click)='onNewTransaction()'>New Transaction</button>
+</p>
 
 <div class='table-responsive'>
     <table class='table table-striped'
             *ngIf='transactions && transactions.length'>
         <thead>
             <tr>
+                <th></th>
                 <th>Code</th>
                 <th>Date</th>
                 <th>Contact</th>
@@ -18,6 +23,11 @@
         </thead>
         <tbody>
             <tr *ngFor='let transaction of transactions'>
+                <td>
+                  <button type="button" class="close" aria-label="Close" (click)='onDeleteTransaction(transaction)'>
+                    <span aria-hidden="true">&times;</span>
+                  </button>
+                </td>
                 <td>{{ transaction.numberCode }}</td>
                 <td>{{ transaction.transactionDate | date: 'short' }}</td>
                 <td>{{ transaction.contact }}</td>
