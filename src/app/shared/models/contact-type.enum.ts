@@ -10,8 +10,8 @@
  */
 
 export const enum ContactType {
-  None = "None",
-  Customer = "Customer",
-  Vendor = "Vendor",
-  Other = "Other"
+  None = 'None',
+  Customer = 'Customer',
+  Vendor = 'Vendor',
+  Other = 'Other'
 }

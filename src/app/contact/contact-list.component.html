@@ -1,0 +1,38 @@
+<h2>Contacts</h2>
+<p>Your company's financial activity</p>
+
+<p>
+  <button class="btn btn-primary" (click)='onNewContact()'>New Contact</button>
+</p>
+
+<div class='table-responsive'>
+    <table class='table table-striped'
+            *ngIf='contacts && contacts.length'>
+        <thead>
+            <tr>
+                <th></th>
+                <th>Name</th>
+                <th>Description</th>
+                <th>Account #</th>
+                <th>Address</th>
+                <th>Type</th>
+                <th>Default Category</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor='let contact of contacts'>
+                <td>
+                  <button type="button" class="close" aria-label="Close" (click)='onDeleteContact(contact)'>
+                    <span aria-hidden="true">&times;</span>
+                  </button>
+                </td>
+                <td>{{ contact.name }}</td>
+                <td>{{ contact.description }}</td>
+                <td>{{ contact.accountNumber }}</td>
+                <td>{{ contact.address }}</td>
+                <td>{{ contact.type }}</td>
+                <td>{{ contact.defaultCategory }}</td>
+            </tr>
+        </tbody>
+    </table>
+</div>

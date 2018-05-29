@@ -20,7 +20,7 @@ export class Contact implements Trackable {
 
 /* ToDo: replace these with actual class types */
   address: string;
-  contactType: string;
+  type: string;
   defaultCategory: string;
 
 /* ToDo: Consider putting these in a superclass */

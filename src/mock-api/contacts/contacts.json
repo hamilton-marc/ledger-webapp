@@ -1,0 +1,30 @@
+[
+  {
+    "id" : 1,
+
+    "name" : "Staples",
+    "description" : "Office supply store",
+    "accountNumber" : "123",
+
+    "address" : "4240 S Arizona Ave, Chandler, AZ 85248",
+    "type" : "Vendor",
+    "defaultCategory" : "Office Supplies",
+
+    "createdAt" : "2018-02-04T09:50:50-07:00",
+    "updatedAt" : "2018-02-04T09:50:50-07:00"
+  },
+  {
+    "id" : 2,
+
+    "name" : "Taco Bell",
+    "description" : "Taco Bell restaurants",
+    "accountNumber" : "456",
+
+    "address" : "1550 E Warner Rd, Gilbert, AZ 85296",
+    "type" : "Vendor",
+    "defaultCategory" : "Catering",
+
+    "createdAt" : "2018-02-05T09:50:50-07:00",
+    "updatedAt" : "2018-02-05T09:50:50-07:00"
+  }
+]

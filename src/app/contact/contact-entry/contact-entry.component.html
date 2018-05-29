@@ -1,0 +1,38 @@
+<h2>Contact Entry</h2>
+<p>Enter the details of the contact below</p>
+
+
+<form [formGroup]="contactEntryForm" (submit)="saveContact()">
+  <div class="form-group">
+    <label for="name">Name</label>
+    <input formControlName="name" id="name" class="form-control w-50"/>
+  </div>
+
+  <div class="form-group">
+    <label for="description">Description</label>
+    <input formControlName="description" id="description" class="form-control w-75"/>
+  </div>
+
+  <div class="form-group">
+    <label for="accountNumber">AccountNumber</label>
+    <input formControlName="accountNumber" id="accountNumber" class="form-control w-25"/>
+  </div>
+
+  <div class="form-group">
+    <label for="address">Address</label>
+    <input formControlName="address" id="address" class="form-control w-50"/>
+  </div>
+
+  <div class="form-group">
+    <label for="type">Type</label>
+    <input formControlName="type" id="type" class="form-control w-25"/>
+  </div>
+
+  <div class="form-group">
+    <label for="defaultCategory">Default Category</label>
+    <input formControlName="defaultCategory" id="defaultCategory" class="form-control w-50"/>
+  </div>
+
+
+  <button type="submit" class="btn btn-primary">Submit</button>
+</form>

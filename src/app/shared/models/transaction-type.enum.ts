@@ -13,9 +13,9 @@
  */
 
 export enum TransactionType {
-  None = "None",
-  Revenue = "Revenue",
-  Contribution = "Contribution",
-  Expense = "Expense",
-  Withdrawl = "Withdrawl"
+  None = 'None',
+  Revenue = 'Revenue',
+  Contribution = 'Contribution',
+  Expense = 'Expense',
+  Withdrawl = 'Withdrawl'
 }
